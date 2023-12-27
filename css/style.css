@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,700&display=swap');
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 40px auto auto;
+    background-color: #FFFFFF;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+a:hover, a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.logo {
+    display: flex;
+    width: 220px;
+    height: 70px;
+}
+
+.logo__title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    width: 127px;
+    height: 70px;
+}
+
+.logo__brand-name {
+    font-size: 32px;
+}
+
+.logo__caption-text {
+    color: #797777;
+}
+
+
+.button-red {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 31px;
+    width: 177px;
+    height: 52px;
+    color: white;
+    outline: none;
+    background-color: #FF6D4D;
+}
+
+
+.button-red:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.promo {
+    padding-top: 100px;
+    margin-top: 60px;
+}
+
+.promo__text {
+    width: 510px;
+    height: 230px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.button-green {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    border-radius: 70px;
+    width: 278px;
+    height: 84px;
+    color: white;
+    outline: none;
+    background-color: #0F9004;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    margin-top: 60px;
+}
+
+.background_XXL1400px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Backgr.png');
+    background-size: cover;
+    height: 950px;
+    width: 100%;
+}
+
+.background_sm576px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Frame51.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+}
+
+.promo {
+    margin-bottom: 100px;
+    padding-left: 250px;
+}
+
+.promo__text_sm576px {
+    width: 510px;
+    height: 230px;
+    font-size: 50px;
+    font-weight: 800;
+    padding-left: 70px;
+}
+
+.background_sm768px {
+    background-image: url('/drivingSchoolDnepr/img/png/backgr_758.png');
+    width: 100%;
+    height: 600px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.background_sm992px {
+    background-image: url('/drivingSchoolDnepr/img/png/backgr_992.png');
+    width: 100%;
+    height: 750px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.background_sm1199px {
+    background-image: url('/drivingSchoolDnepr/img/png/backgr_1199.png');
+    width: 100%;
+    height: 750px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.promo_sm1199px {
+    margin-top: 20px;
+    width: 510px;
+    height: 230px;
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: 150px;
+}
+
+.fillials_1400 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.map__wrapper_1400 {
+    display: flex;
+    justify-content: space-between;
+    width: 1450px;
+    height: 600px;
+    background-color: #F4F4F4;
+}
+
+.fillials_text_1400 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fillials_sm576px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-yellow {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    border-radius: 70px;
+    width: 278px;
+    height: 84px;
+    color: black;
+    outline: none;
+    background-color: yellow;
+    font-size: 16px;
+}
+
+.map_sm576px {
+    width: 90%;
+    height: 500px;
+    background-color: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.map__google-maps_sm576px {
+    margin-top: 50px;
+}
+
+.fillials_sm768px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.map__wrapper_sm768px {
+    width: 100%;
+    height: 650px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+.map__google-maps_sm768px {
+    margin-top: 50px;
+}
+
+.fillials_sm768px_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-container {
+    padding-top: 5px;
+}
+
+.fillials_sm992px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fillials_sm992px_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map__wrapper_sm992px {
+    width: 100%;
+    height: 625px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fillials_sm1199px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fillials_sm1199px_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map__wrapper_sm1199px {
+    width: 100%;
+    height: 800px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.map__google-maps_sm1199px {
+    margin-top: 70px;
+}
+
+.fillials_sm1400px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fillials_sm1400px_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map__wrapper_sm1400px {
+    width: 100%;
+    height: 800px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-price-wrap {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group6.jpg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider__content {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+}
+
+.card {
+    height: 300px;
+    width: 275px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right_arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right_arrow:hover {
+    background-color: #0F9004;
+}
+
+.right_arrow:hover svg path {
+    stroke: #E1D4C9;
+}
+
+.education-price__caption {
+    margin-left: 5%;
+    text-align: center;
+}
+
+.card_992px {
+    height: 250px;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card_768px {
+    height: 250px;
+    width: 190px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card_576px {
+    height: 300px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.education-price-wrap_576px {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layout-2-column {
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url('/drivingSchoolDnepr/img/jpg/image 5.jpg');
+    background-size: 30%;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about-education__info {
+    height: 50%;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.education_img_1400 {
+    width: 40%;
+    height: 40%;
+}
+
+.layout-2-column_576{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-education__text {
+    font-size: 20px;
+    width: 90%;
+}
+
+.about-education_text_main_1400 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.about-education__text_1400 {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.sub_education_1400 {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.about-education__learning-topics_1400 {
+    font-size: 20px;
+}
+
+.about-education_text_main {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.about-education__info_1200 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.about-education__text {
+    font-size: 10px;
+    width: 90%;
+}
+
+.about-education__learning-topics_1200 {
+    font-size: 14px;
+    width: 90%;
+}
+
+.about-education_text_main {
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.education_img_1200 {
+    width: 42%;
+}
+
+
+.about-education__info_992 {
+    height: 40%;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.education_img_992 {
+    height: 40%;
+    width: 49%;
+}
+
+.sub_education_992 {
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.about-education__text_992 {
+    font-size: 14px;
+}
+
+.about-education_text_main_992 {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.about-education__learning-topics_992 {
+    font-size: 13px;
+}
+
+.education_img_768 {
+    height: 50%;
+    width: 49%;
+}
+
+.about-education__info_768 {
+    height: 50%;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.about-education__text_768 {
+    font-size: 13px;
+}
+
+.about-education_text_main_768 {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.about-education__learning-topics_768 {
+    font-size: 12px;
+}
+
+.sub_education_768 {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.education_img_576 {
+    width: 49%;
+    height: 50%;
+}
+
+.about-education__info_576 {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    margin-top: 50px;
+}
+
+.about-education__info_576 {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.about-education__text_576 {
+    font-size: 20px;
+}
+
+.about-education_text_main_576{
+    font-size: 25px;
+    font-weight: 800;
+}
+.sub_education_576 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.about-education__learning-topics_576 {
+    font-size: 20px;
+}
+
+.slider__control {
+    list-style: none;
+}
+
+.school-autopark {
+    margin-top: 200px;
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.school-autopark_text {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+
+.slider {
+    margin-top: 150px;
+}
+
+
+.student-feedback {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 8.jpg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+}
+
+.comment__heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.comment__body {
+    text-align: center;
+}
+
+.comment__read-more {
+    display: flex;
+    justify-content: center;
+}
+
+.student-feedback_main_text {
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.student-feedback__button {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.right_arrow_comment {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right_arrow_comment:hover {
+    background-color: #FF6D4D;
+}
+
+.right_arrow_comment:hover svg path {
+    stroke: #E1D4C9;
+}
+
+.join-our-school_576 {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.join-our-school__form {
+    height: 400px;
+    width: 25%;
+    border-radius: 25px;
+    background-color: #F4F4F4;
+    border: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-our-school__form_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-our-school__promo {
+    width: 20%;
+}
+
+.join-our-school_576{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.join-our-school__promo_576{
+    margin-top: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.join-our-school__form_576{
+    height: 400px;
+    width: 90%;
+    border-radius: 25px;
+    background-color: #F4F4F4;
+    border: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-name_576{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.hone-number_576{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.email_576{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.join-our-school_768{
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+}
+.join-our-school_768_wrap{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.join-our-school__promo_768{
+    margin-top: 50px;
+    width: 80%;
+    text-align: center;
+}
+
+.join-our-school__form_768{
+    height: 400px;
+    width: 70%;
+    border-radius: 25px;
+    background-color: #F4F4F4;
+    border: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join-our-school__form_wrap_768{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.full-name_768{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.phone-number_768{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.email_768{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.join-our-school_992{
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+}
+
+.join-our-school_992_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 300px;
+}
+
+.join-our-school__form_992{
+    height: 400px;
+    width: 40%;
+    border-radius: 25px;
+    background-color: #F4F4F4;
+    border: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join-our-school__promo_992{
+    width: 40%;
+    text-align: center;
+}
+
+.email_992{
+    margin-bottom: 20px;
+}
+
+.phone-number_992{
+    margin-bottom: 20px;
+}
+
+.full-name_992{
+    margin-bottom: 20px;
+}
