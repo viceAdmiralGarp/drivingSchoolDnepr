@@ -1,0 +1,59 @@
+
+const windowWidth = window.innerWidth;
+
+document.getElementById('register-' + getScreenSize(windowWidth)).addEventListener('submit', function(e) {
+    e.preventDefault();
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Basic dXNlcjo4YTJhODdkNC00ZTM0LTRlMjUtYmJiMi03YWJmNjk3MjAxMmU=");
+    myHeaders.append("Content-Type", "application/json");
+ 
+    var fullName = document.getElementById('name_' + getScreenSize(windowWidth)).value;
+    var phoneNumber = document.getElementById('phone_' + getScreenSize(windowWidth)).value;
+    var email = document.getElementById('email_' + getScreenSize(windowWidth)).value;
+
+    var data = {
+        fullName: fullName,
+        phoneNumber: phoneNumber,
+        email: email
+    };
+
+    fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8080/register', {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        // Handle the response here, if needed
+    })
+    .catch(error => {
+        // Handle any errors here
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByTagName("INPUT");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+            if (e.target.validity.valueMissing) {
+                e.target.setCustomValidity("Это поле не может быть пустым");
+            }
+            if (e.target.validity.typeMismatch) {
+                e.target.setCustomValidity("Пожалуйста, введите корректный email");
+            }
+        };
+        elements[i].oninput = function(e) {
+            e.target.setCustomValidity("");
+        };
+    }
+})
+
+function getScreenSize(windowWidth) {
+    if (windowWidth <= 576)
+      return '576'
+    else if (windowWidth <= 768)
+      return '768'
+    else if (windowWidth > 769)
+      return '992'
+  }
+  
