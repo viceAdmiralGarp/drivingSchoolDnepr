@@ -1,6 +1,5 @@
 
 const windowWidth = window.innerWidth;
-
 document.getElementById('register-' + getScreenSize(windowWidth)).addEventListener('submit', function(e) {
     e.preventDefault();
     var myHeaders = new Headers();
@@ -23,7 +22,22 @@ document.getElementById('register-' + getScreenSize(windowWidth)).addEventListen
         body: JSON.stringify(data)
     })
     .then(response => {
-        // Handle the response here, if needed
+        var existingAlert = document.querySelector(".alert");
+      
+        if (existingAlert) {
+          existingAlert.remove(); // Remove any existing alert
+        }
+        
+        var successAlert = document.createElement("div");
+      successAlert.id = "successAlert";
+      successAlert.textContent = "Регистрация произошла успешно, ожидайте нашего звонка!";
+      document.body.appendChild(successAlert);
+
+        
+        setTimeout(function() {
+          successAlert.remove(); // Remove the alert after 3 seconds
+        }, 6000);
+  
     })
     .catch(error => {
         // Handle any errors here
