@@ -96,24 +96,23 @@ hr {
     font-size: 16px;
 }
 
-
-
 .hero {
     display: flex;
     margin-top: 60px;
 }
 
 .background_XXL1400px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Backgr.png');
+    background-image: url('/img/jpg/Backgr.png');
     background-size: cover;
     height: 950px;
     width: 100%;
 }
 
 .background_sm576px {
-    display: flex;
-    background-image: url('/drivingSchoolDnepr/img/jpg/Frame51.jpg');
+    background-image: url('/img/jpg/Frame51.jpg');
     background-size: cover;
+    display: flex;
+    justify-content: center;
     height: 600px;
     width: 100%;
 }
@@ -131,17 +130,15 @@ hr {
 }
 
 .background_sm768px {
-    background-image: url('/drivingSchoolDnepr/img/png/backgr_758.png');
+    background-image: url('/img/png/backgr_758.png');
     width: 100%;
     height: 600px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-
-
 .background_sm992px {
-    background-image: url('/drivingSchoolDnepr/img/png/backgr_992.png');
+    background-image: url('/img/png/backgr_992.png');
     width: 100%;
     height: 750px;
     background-size: 100%;
@@ -149,7 +146,7 @@ hr {
 }
 
 .background_sm1199px {
-    background-image: url('/drivingSchoolDnepr/img/png/backgr_1199.png');
+    background-image: url('/img/png/backgr_1199.png');
     width: 100%;
     height: 750px;
     background-size: 100%;
@@ -170,7 +167,7 @@ hr {
     flex-direction: column;
     align-items: center;
     height: 1000px;
-    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-image: url('/img/jpg/Fillialsbackground (1).jpg');
     background-size: cover;
     background-position: center;
 }
@@ -197,7 +194,7 @@ hr {
 }
 
 .fillials_sm576px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-image: url('/img/jpg/Fillialsbackground (1).jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -243,7 +240,7 @@ hr {
 }
 
 .fillials_sm768px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-image: url('/img/jpg/Fillialsbackground (1).jpg');
     background-size: cover;
     background-position: center;
 }
@@ -258,6 +255,7 @@ hr {
     align-items: center;
 
 }
+
 
 
 .map__google-maps_sm768px {
@@ -275,7 +273,7 @@ hr {
 }
 
 .fillials_sm992px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-image: url('/img/jpg/Fillialsbackground (1).jpg');
     background-size: cover;
     background-position: center;
 }
@@ -297,7 +295,7 @@ hr {
 }
 
 .fillials_sm1199px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-image: url('/img/jpg/Fillialsbackground (1).jpg');
     background-size: cover;
     background-position: center;
 }
@@ -324,7 +322,7 @@ hr {
 }
 
 .fillials_sm1400px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Fillialsbackground (1).jpg');
+    background-image: url('/img/jpg/Fillialsbackground (1).jpg');
     background-size: cover;
     background-position: center;
 }
@@ -346,7 +344,7 @@ hr {
 }
 
 .education-price-wrap {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group6.jpg');
+    background-image: url('/img/jpg/Group6.jpg');
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
@@ -362,6 +360,7 @@ hr {
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
+    flex-direction: row;
 }
 
 .card {
@@ -455,7 +454,7 @@ hr {
 }
 
 .education-price-wrap_576px {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group6.jpg');
+    background-image: url('/img/jpg/Group6.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -469,7 +468,7 @@ hr {
 .layout-2-column {
     display: flex;
     justify-content: space-evenly;
-    background-image: url('/drivingSchoolDnepr/img/jpg/image 5.jpg');
+    background-image: url('/img/jpg/image 5.jpg');
     background-size: 30%;
     margin-top: 50px;
     background-repeat: no-repeat;
@@ -687,7 +686,7 @@ hr {
 
 .school-autopark {
     margin-top: 200px;
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group 7.jpg');
+    background-image: url('/img/jpg/Group 7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -712,11 +711,11 @@ hr {
 
 
 .student-feedback {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group 8.jpg');
+    background-image: url('/img/jpg/Group 8.jpg');
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 800px;
+    /* height: 800px; */
 }
 
 .comment__heading {
@@ -767,7 +766,7 @@ hr {
 }
 
 .join-our-school_576 {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
+    background-image: url('/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -836,8 +835,8 @@ hr {
     margin-bottom: 20px;
 }
 
-.join-our-school_768 {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
+.join-our-school_768{
+    background-image: url('/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -890,8 +889,8 @@ hr {
     margin-bottom: 20px;
 }
 
-.join-our-school_992 {
-    background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
+.join-our-school_992{
+    background-image: url('/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -933,6 +932,59 @@ hr {
 .full-name_992 {
     margin-bottom: 20px;
 }
+
+.slider__item_comment {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+.slider-wrapper {
+    overflow: hidden;
+  }
+
+  .slide-next {
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: slide-next-animation 0.5s;
+  }
+
+  .slide-previous {
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: slide-prev-animation 0.5s;
+  }
+
+  @keyframes slide-next-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-prev-animation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  #successAlert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    padding: 10px;
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
 
 .footer {
     background-image: url('/drivingSchoolDnepr/img/jpg/Group 10.jpg');
