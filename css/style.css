@@ -96,6 +96,8 @@ hr {
     font-size: 16px;
 }
 
+
+
 .hero {
     display: flex;
     margin-top: 60px;
@@ -109,10 +111,9 @@ hr {
 }
 
 .background_sm576px {
+    display: flex;
     background-image: url('/drivingSchoolDnepr/img/jpg/Frame51.jpg');
     background-size: cover;
-    display: flex;
-    justify-content: center;
     height: 600px;
     width: 100%;
 }
@@ -123,11 +124,10 @@ hr {
 }
 
 .promo__text_sm576px {
-    width: 510px;
-    height: 230px;
-    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
     font-weight: 800;
-    padding-left: 70px;
 }
 
 .background_sm768px {
@@ -137,6 +137,8 @@ hr {
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
+
 
 .background_sm992px {
     background-image: url('/drivingSchoolDnepr/img/png/backgr_992.png');
@@ -218,7 +220,7 @@ hr {
 }
 
 .map_sm576px {
-    width: 90%;
+    width: 100%;
     height: 500px;
     background-color: #F4F4F4;
     display: flex;
@@ -228,8 +230,16 @@ hr {
     justify-content: center;
 }
 
+.dropdown_sm576px_1{
+    text-align: center;
+}
+
 .map__google-maps_sm576px {
     margin-top: 50px;
+}
+
+.dropdown_sm576px_2{
+    text-align: center;
 }
 
 .fillials_sm768px {
@@ -248,7 +258,6 @@ hr {
     align-items: center;
 
 }
-
 
 
 .map__google-maps_sm768px {
@@ -485,7 +494,7 @@ hr {
     height: 40%;
 }
 
-.layout-2-column_576{
+.layout-2-column_576 {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -658,10 +667,11 @@ hr {
     font-size: 20px;
 }
 
-.about-education_text_main_576{
+.about-education_text_main_576 {
     font-size: 25px;
     font-weight: 800;
 }
+
 .sub_education_576 {
     font-size: 25px;
     font-weight: 800;
@@ -697,7 +707,7 @@ hr {
 
 
 .slider {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 
@@ -788,19 +798,19 @@ hr {
     width: 20%;
 }
 
-.join-our-school_576{
+.join-our-school_576 {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
 
-.join-our-school__promo_576{
+.join-our-school__promo_576 {
     margin-top: 50px;
     width: 80%;
     text-align: center;
 }
 
-.join-our-school__form_576{
+.join-our-school__form_576 {
     height: 400px;
     width: 90%;
     border-radius: 25px;
@@ -811,42 +821,43 @@ hr {
     justify-content: center;
 }
 
-.full-name_576{
+.full-name_576 {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.hone-number_576{
+.hone-number_576 {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.email_576{
+.email_576 {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.join-our-school_768{
+.join-our-school_768 {
     background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 800px;
 }
-.join-our-school_768_wrap{
+
+.join-our-school_768_wrap {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     padding-top: 100px;
 }
 
-.join-our-school__promo_768{
+.join-our-school__promo_768 {
     margin-top: 50px;
     width: 80%;
     text-align: center;
 }
 
-.join-our-school__form_768{
+.join-our-school__form_768 {
     height: 400px;
     width: 70%;
     border-radius: 25px;
@@ -858,28 +869,28 @@ hr {
     justify-content: center;
 }
 
-.join-our-school__form_wrap_768{
+.join-our-school__form_wrap_768 {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
 
-.full-name_768{
+.full-name_768 {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.phone-number_768{
+.phone-number_768 {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.email_768{
+.email_768 {
     width: 80%;
     margin-bottom: 20px;
 }
 
-.join-our-school_992{
+.join-our-school_992 {
     background-image: url('/drivingSchoolDnepr/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -887,14 +898,14 @@ hr {
     height: 1000px;
 }
 
-.join-our-school_992_wrap{
+.join-our-school_992_wrap {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding-top: 300px;
 }
 
-.join-our-school__form_992{
+.join-our-school__form_992 {
     height: 400px;
     width: 40%;
     border-radius: 25px;
@@ -906,19 +917,72 @@ hr {
     justify-content: center;
 }
 
-.join-our-school__promo_992{
+.join-our-school__promo_992 {
     width: 40%;
     text-align: center;
 }
 
-.email_992{
+.email_992 {
     margin-bottom: 20px;
 }
 
-.phone-number_992{
+.phone-number_992 {
     margin-bottom: 20px;
 }
 
-.full-name_992{
+.full-name_992 {
     margin-bottom: 20px;
+}
+
+.footer {
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__wrapper {
+    margin-top: 25%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.about-us {
+    width: 45%;
+}
+
+.contacts {
+    width: 45%;
+}
+
+.contacts__item{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+@media (max-width: 575px) {
+    .footer {
+        display: none;
+    }
+}
+
+.footer_576{
+    background-image: url('/drivingSchoolDnepr/img/jpg/Group 10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__wrapper_576{
+    margin-top: 70%;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    text-align: center;
 }
