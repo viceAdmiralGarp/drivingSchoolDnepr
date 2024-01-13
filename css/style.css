@@ -975,3 +975,6 @@ hr {
     border-radius: 4px;
     font-size: 16px;
   }
+  .row {
+    padding-left: 2rem;
+  }

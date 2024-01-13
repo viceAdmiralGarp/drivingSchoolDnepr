@@ -61,7 +61,6 @@ function fillSlider(result) {
         `;
     sliderContent.appendChild(sliderItem);
   });
-  // sliderContent.appendChild(createRightArrow());
   nextButton(windowWidth, sliderContent)
 }
 
@@ -79,96 +78,33 @@ function createRightArrow() {
   return rightArrow;
 }
 
-// function nextButton(numberToShow, sliderElement) {
-//   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
-
-//   console.log(sliderItems);
-//   let currentIndex = 0;
-
-//   const showSliderItems = () => {
-//     sliderItems.forEach((item, index) => {
-//       if (index >= currentIndex && index < currentIndex + numberToShow) {
-//         item.style.display = 'block';
-//       } else {
-//         item.style.display = 'none';
-//       }
-//     });
-//   };
-
-//   const nextButton = document.querySelector("#right_arrow_comment_id-1199");
-//   nextButton.addEventListener('click', () => {
-//     currentIndex += numberToShow;
-//     if (currentIndex >= sliderItems.length) {
-//       currentIndex = 0;
-//     }
-//     showSliderItems();
-//   });
-
-//   const prevButton = document.querySelector("#left_arrow_comment_id-1199");
-//   prevButton.addEventListener('click', () => {
-//     currentIndex -= numberToShow;
-//     if (currentIndex < 0) {
-//       currentIndex = Math.ceil(sliderItems.length / numberToShow) * numberToShow - numberToShow;
-//     }
-//     showSliderItems();
-//   });
-
-//   // Show the initial three items
-//   showSliderItems();
-// }
-
 function nextButton(windowWidth, sliderElement) {
   const numberToShow = getNumberToShow(windowWidth)
   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
 
-  let currentIndex = 0;
-
   const showSliderItems = (slides) => {
-    sliderItems.forEach(item => {
-      item.style.display = 'none';
-      // item.style.opacity = 0;
-    })
-    slides.forEach(item => {
-        item.style.display = 'block';
-        // item.style.transition = 'opacity 1.5s';
-        // item.style.opacity = 1;
+    sliderElement.innerHTML = '';
+    slides.forEach((item, index) => {
+      sliderElement.appendChild(item);
+      item.style.opacity = '0';
+      item.style.transition = 'opacity 0.5s';
+      setTimeout(() => {
+        item.style.opacity = '1'; // Fade-in animation
+      }, index * 200); // You can adjust the duration between each item
     });
-    console.log(sliderItems[1] == slides[1]);
-  };
-
-  Array.prototype.rotate = function (n) {
-    var len = this.length;
-    // console.log(this.map((e, i, a) => a[(i + (len + n % len)) % len]));
-    return !(n % len) ? this.slice()
-      : this.map((e, i, a) => a[(i + (len + n % len)) % len]);
   };
 
   const nextButton = document.querySelector("#right_arrow_comment_id-" + getScreenSizeComment(windowWidth));
   nextButton.addEventListener('click', () => {
-    currentIndex++;
-    // const toDisplay = Array.from(sliderItems).rotate(sliderItems.length + currentIndex)
-    // if (sliderItems.length > numberToShow) {
-    //   toDisplay[numberToShow - 1].classList.add('slide-next');
-    //   setTimeout(() => toDisplay[numberToShow - 1].classList.remove('slide-next'), 200);
-    // }
-    showSliderItems(showNextComments(Array.from(sliderItems), numberToShow));
-    console.log(showNextComments(Array.from(sliderItems), numberToShow));
+    showSliderItems(showNextComments(sliderItems, numberToShow));
   });
 
   const prevButton = document.querySelector("#left_arrow_comment_id-" + getScreenSizeComment(windowWidth));
   prevButton.addEventListener('click', () => {
-    currentIndex--;
-    const toDisplay = Array.from(sliderItems).rotate(sliderItems.length + currentIndex);
-    if (sliderItems.length > numberToShow) {
-      sliderElement.classList.add('slide-previous');
-      setTimeout(() => sliderElement.classList.remove('slide-previous'), 600);
-    }
-    showSliderItems(toDisplay);
+    showSliderItems(showPrevComments(sliderItems, numberToShow));
   });
-
-
-  // Show the initial slides
-  showSliderItems([sliderItems[0], sliderItems[1], sliderItems[2]]);
+  
+  showSliderItems(Array.from(sliderItems).slice(0, numberToShow));
 }
 
 const form = document.querySelector('#commentForm');
@@ -186,12 +122,12 @@ form.addEventListener('submit', (event) => {
       date: new Date(),
     }),
   })
-    .then(response => {
+    .then(_ => {
       getComments();
       document.querySelector('#fullname').value = '';
       document.querySelector('#comment').value = '';
     })
-    .catch(error => {
+    .catch(_ => {
       // Handle the error here
     });
 });
@@ -218,22 +154,28 @@ function getNumberToShow(windowWidth) {
     return 3
 }
 
-var currentIndexC = 0; // индекс текущего комментария
+var currentIndexC = 1; 
 
 function showNextComments(comments, numberToShow) {
-  // Очищаем список отображаемых комментариев
   let displayedComments = [];
 
-  // Добавляем следующие комментарии к отображаемым комментариям
   for (var i = 0; i < numberToShow; i++) {
     var comment = comments[(currentIndexC + i) % comments.length];
     displayedComments.push(comment);
   }
-  
-  // Перемещаем отображение комментариев на экране
-  // (здесь вам может потребоваться изменить логику, в зависимости от вашего макета и требований)
-  
-  // Переходим к следующему комментарию
   currentIndexC = (currentIndexC + 1) % comments.length;
+  return displayedComments;
+}
+
+function showPrevComments(comments, numberToShow) {
+  let displayedComments = [];
+
+  for (var i = numberToShow - 1; i >= 0; i--) {
+    var commentIndex = (currentIndexC - i) < 0 ? comments.length - 1 : (currentIndexC - i);
+    var comment = comments[commentIndex];
+    displayedComments.push(comment);
+  }
+
+  currentIndexC = currentIndexC > 0 ? currentIndexC - 1 : comments.length - 1;
   return displayedComments;
 }
