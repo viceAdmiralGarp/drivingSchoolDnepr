@@ -81,7 +81,7 @@ function createRightArrow() {
 
 // function nextButton(numberToShow, sliderElement) {
 //   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
-  
+
 //   console.log(sliderItems);
 //   let currentIndex = 0;
 
@@ -120,46 +120,55 @@ function createRightArrow() {
 function nextButton(windowWidth, sliderElement) {
   const numberToShow = getNumberToShow(windowWidth)
   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
+
   let currentIndex = 0;
 
-  const showSliderItems = () => {
-    sliderItems.forEach((item, index) => {
-      if (index >= currentIndex && index < currentIndex + numberToShow) {
+  const showSliderItems = (slides) => {
+    sliderItems.forEach(item => {
+      item.style.display = 'none';
+      // item.style.opacity = 0;
+    })
+    slides.forEach(item => {
         item.style.display = 'block';
-        item.style.transition = 'opacity 1s';
-        item.style.opacity = 1;
-      } else {
-        item.style.display = 'none';
-        item.style.opacity = 0;
-      }
+        // item.style.transition = 'opacity 1.5s';
+        // item.style.opacity = 1;
     });
+    console.log(sliderItems[1] == slides[1]);
+  };
+
+  Array.prototype.rotate = function (n) {
+    var len = this.length;
+    // console.log(this.map((e, i, a) => a[(i + (len + n % len)) % len]));
+    return !(n % len) ? this.slice()
+      : this.map((e, i, a) => a[(i + (len + n % len)) % len]);
   };
 
   const nextButton = document.querySelector("#right_arrow_comment_id-" + getScreenSizeComment(windowWidth));
   nextButton.addEventListener('click', () => {
-    currentIndex += numberToShow;
-    if (currentIndex >= sliderItems.length) {
-      currentIndex = 0;
-    }
-    sliderElement.classList.add('slide-next');
-    showSliderItems();
-    setTimeout(() => sliderElement.classList.remove('slide-next'), 500);
+    currentIndex++;
+    // const toDisplay = Array.from(sliderItems).rotate(sliderItems.length + currentIndex)
+    // if (sliderItems.length > numberToShow) {
+    //   toDisplay[numberToShow - 1].classList.add('slide-next');
+    //   setTimeout(() => toDisplay[numberToShow - 1].classList.remove('slide-next'), 200);
+    // }
+    showSliderItems(showNextComments(Array.from(sliderItems), numberToShow));
+    console.log(showNextComments(Array.from(sliderItems), numberToShow));
   });
+
   const prevButton = document.querySelector("#left_arrow_comment_id-" + getScreenSizeComment(windowWidth));
-  // console.log(getScreenSize(windowWidth));
-  
   prevButton.addEventListener('click', () => {
-    currentIndex -= numberToShow;
-    if (currentIndex < 0) {
-      currentIndex = Math.ceil(sliderItems.length / numberToShow) * numberToShow - numberToShow;
+    currentIndex--;
+    const toDisplay = Array.from(sliderItems).rotate(sliderItems.length + currentIndex);
+    if (sliderItems.length > numberToShow) {
+      sliderElement.classList.add('slide-previous');
+      setTimeout(() => sliderElement.classList.remove('slide-previous'), 600);
     }
-    sliderElement.classList.add('slide-previous');
-    showSliderItems();
-    setTimeout(() => sliderElement.classList.remove('slide-previous'), 500);
+    showSliderItems(toDisplay);
   });
-  
+
+
   // Show the initial slides
-  showSliderItems();
+  showSliderItems([sliderItems[0], sliderItems[1], sliderItems[2]]);
 }
 
 const form = document.querySelector('#commentForm');
@@ -207,4 +216,24 @@ function getNumberToShow(windowWidth) {
     return 2
   else if (windowWidth > 993)
     return 3
+}
+
+var currentIndexC = 0; // индекс текущего комментария
+
+function showNextComments(comments, numberToShow) {
+  // Очищаем список отображаемых комментариев
+  let displayedComments = [];
+
+  // Добавляем следующие комментарии к отображаемым комментариям
+  for (var i = 0; i < numberToShow; i++) {
+    var comment = comments[(currentIndexC + i) % comments.length];
+    displayedComments.push(comment);
+  }
+  
+  // Перемещаем отображение комментариев на экране
+  // (здесь вам может потребоваться изменить логику, в зависимости от вашего макета и требований)
+  
+  // Переходим к следующему комментарию
+  currentIndexC = (currentIndexC + 1) % comments.length;
+  return displayedComments;
 }
