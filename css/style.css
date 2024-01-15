@@ -127,7 +127,11 @@ hr {
     height: 100%;
     font-size: 40px;
     font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
 }
+
 
 .background_sm768px {
     background-image: url('/img/png/backgr_758.png');
@@ -185,12 +189,14 @@ hr {
     font-size: 50px;
     font-weight: 800;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .dropdown-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .fillials_sm576px {
@@ -229,6 +235,9 @@ hr {
 
 .dropdown_sm576px_1{
     text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .map__google-maps_sm576px {
@@ -237,6 +246,7 @@ hr {
 
 .dropdown_sm576px_2{
     text-align: center;
+    width: 50%;
 }
 
 .fillials_sm768px {
@@ -363,6 +373,17 @@ hr {
     flex-direction: row;
 }
 
+.slider__content_576{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.education-price_576px{
+    height: 2200px;
+}
 .card {
     height: 300px;
     width: 275px;
@@ -382,6 +403,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .right_arrow {
@@ -639,7 +661,7 @@ hr {
 }
 
 .education_img_576 {
-    width: 49%;
+    width: 80%;
     height: 50%;
 }
 
@@ -664,11 +686,13 @@ hr {
 
 .about-education__text_576 {
     font-size: 20px;
+    text-align: center;
 }
 
 .about-education_text_main_576 {
     font-size: 25px;
     font-weight: 800;
+    text-align: center;
 }
 
 .sub_education_576 {
@@ -707,6 +731,11 @@ hr {
 
 .slider {
     margin-top: 100px;
+}
+
+.slider_576px{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -799,7 +828,7 @@ hr {
 
 .join-our-school_576 {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -1037,4 +1066,9 @@ hr {
     flex-direction: column;
     color: #FFFFFF;
     text-align: center;
+}
+
+.join-our-school__button{
+    display: flex;
+    justify-content: center;
 }
