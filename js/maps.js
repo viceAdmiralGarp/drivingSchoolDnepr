@@ -63,7 +63,7 @@ locationSelect.addEventListener("change", function () {
 
 function getScreenSizeMap(windowWidth) {
     if (windowWidth <= 576)
-        return { element: '576', mapW: '400', mapH: '300' }
+        return { element: '576', mapW: '320', mapH: '300' }
     else if (windowWidth <= 768)
         return { element: '768', mapW: '576', mapH: '450' }
     else if (windowWidth <= 992)
