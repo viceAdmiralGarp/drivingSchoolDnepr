@@ -16,7 +16,7 @@ document.getElementById('register-' + getScreenSize(windowWidth)).addEventListen
         email: email
     };
 
-    fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8081/register', {
+    fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8080/register', {
         method: 'POST',
         headers: myHeaders,
         body: JSON.stringify(data)
