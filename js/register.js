@@ -1,5 +1,5 @@
 
-const windowWidth = window.innerWidth;
+var windowWidth = window.innerWidth;
 document.getElementById('register-' + getScreenSize(windowWidth)).addEventListener('submit', function(e) {
     e.preventDefault();
     var myHeaders = new Headers();
@@ -16,7 +16,7 @@ document.getElementById('register-' + getScreenSize(windowWidth)).addEventListen
         email: email
     };
 
-    fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8080/register', {
+    fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8081/register', {
         method: 'POST',
         headers: myHeaders,
         body: JSON.stringify(data)

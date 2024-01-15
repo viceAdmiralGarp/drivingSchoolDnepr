@@ -61,7 +61,6 @@ function fillSlider(result) {
         `;
     sliderContent.appendChild(sliderItem);
   });
-  // sliderContent.appendChild(createRightArrow());
   nextButton(windowWidth, sliderContent)
 }
 
@@ -79,87 +78,33 @@ function createRightArrow() {
   return rightArrow;
 }
 
-// function nextButton(numberToShow, sliderElement) {
-//   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
-  
-//   console.log(sliderItems);
-//   let currentIndex = 0;
-
-//   const showSliderItems = () => {
-//     sliderItems.forEach((item, index) => {
-//       if (index >= currentIndex && index < currentIndex + numberToShow) {
-//         item.style.display = 'block';
-//       } else {
-//         item.style.display = 'none';
-//       }
-//     });
-//   };
-
-//   const nextButton = document.querySelector("#right_arrow_comment_id-1199");
-//   nextButton.addEventListener('click', () => {
-//     currentIndex += numberToShow;
-//     if (currentIndex >= sliderItems.length) {
-//       currentIndex = 0;
-//     }
-//     showSliderItems();
-//   });
-
-//   const prevButton = document.querySelector("#left_arrow_comment_id-1199");
-//   prevButton.addEventListener('click', () => {
-//     currentIndex -= numberToShow;
-//     if (currentIndex < 0) {
-//       currentIndex = Math.ceil(sliderItems.length / numberToShow) * numberToShow - numberToShow;
-//     }
-//     showSliderItems();
-//   });
-
-//   // Show the initial three items
-//   showSliderItems();
-// }
-
 function nextButton(windowWidth, sliderElement) {
   const numberToShow = getNumberToShow(windowWidth)
   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
-  let currentIndex = 0;
 
-  const showSliderItems = () => {
-    sliderItems.forEach((item, index) => {
-      if (index >= currentIndex && index < currentIndex + numberToShow) {
-        item.style.display = 'block';
-        item.style.transition = 'opacity 1s';
-        item.style.opacity = 1;
-      } else {
-        item.style.display = 'none';
-        item.style.opacity = 0;
-      }
+  const showSliderItems = (slides) => {
+    sliderElement.innerHTML = '';
+    slides.forEach((item, index) => {
+      sliderElement.appendChild(item);
+      item.style.opacity = '0';
+      item.style.transition = 'opacity 0.5s';
+      setTimeout(() => {
+        item.style.opacity = '1'; // Fade-in animation
+      }, index * 200); // You can adjust the duration between each item
     });
   };
 
   const nextButton = document.querySelector("#right_arrow_comment_id-" + getScreenSizeComment(windowWidth));
   nextButton.addEventListener('click', () => {
-    currentIndex += numberToShow;
-    if (currentIndex >= sliderItems.length) {
-      currentIndex = 0;
-    }
-    sliderElement.classList.add('slide-next');
-    showSliderItems();
-    setTimeout(() => sliderElement.classList.remove('slide-next'), 500);
+    showSliderItems(showNextComments(sliderItems, numberToShow));
   });
+
   const prevButton = document.querySelector("#left_arrow_comment_id-" + getScreenSizeComment(windowWidth));
-  // console.log(getScreenSize(windowWidth));
-  
   prevButton.addEventListener('click', () => {
-    currentIndex -= numberToShow;
-    if (currentIndex < 0) {
-      currentIndex = Math.ceil(sliderItems.length / numberToShow) * numberToShow - numberToShow;
-    }
-    sliderElement.classList.add('slide-previous');
-    showSliderItems();
-    setTimeout(() => sliderElement.classList.remove('slide-previous'), 500);
+    showSliderItems(showPrevComments(sliderItems, numberToShow));
   });
   
-  // Show the initial slides
-  showSliderItems();
+  showSliderItems(Array.from(sliderItems).slice(0, numberToShow));
 }
 
 const form = document.querySelector('#commentForm');
@@ -177,12 +122,12 @@ form.addEventListener('submit', (event) => {
       date: new Date(),
     }),
   })
-    .then(response => {
+    .then(_ => {
       getComments();
       document.querySelector('#fullname').value = '';
       document.querySelector('#comment').value = '';
     })
-    .catch(error => {
+    .catch(_ => {
       // Handle the error here
     });
 });
@@ -207,4 +152,30 @@ function getNumberToShow(windowWidth) {
     return 2
   else if (windowWidth > 993)
     return 3
+}
+
+var currentIndexC = 1; 
+
+function showNextComments(comments, numberToShow) {
+  let displayedComments = [];
+
+  for (var i = 0; i < numberToShow; i++) {
+    var comment = comments[(currentIndexC + i) % comments.length];
+    displayedComments.push(comment);
+  }
+  currentIndexC = (currentIndexC + 1) % comments.length;
+  return displayedComments;
+}
+
+function showPrevComments(comments, numberToShow) {
+  let displayedComments = [];
+
+  for (var i = numberToShow - 1; i >= 0; i--) {
+    var commentIndex = (currentIndexC - i) < 0 ? comments.length - 1 : (currentIndexC - i);
+    var comment = comments[commentIndex];
+    displayedComments.push(comment);
+  }
+
+  currentIndexC = currentIndexC > 0 ? currentIndexC - 1 : comments.length - 1;
+  return displayedComments;
 }
