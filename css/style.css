@@ -794,6 +794,17 @@ hr {
     justify-content: center;
 }
 
+.school-autopark_576{
+    background-image: url('/img/jpg/Group 7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .school-autopark_1199 {
     background-image: url('/img/jpg/Group 7.jpg');
     background-size: cover;
