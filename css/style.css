@@ -11,7 +11,7 @@ header {
 }
 
 body {
-    margin-top: 155px;
+    margin-top: 86px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     font-size: 18px;
@@ -40,7 +40,6 @@ hr {
 
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
