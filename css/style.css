@@ -43,6 +43,11 @@ hr {
     height: 70px;
 }
 
+.backgr_wrapper_768 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
 
 .logo__brand-name {
     font-size: 32px;
@@ -98,6 +103,10 @@ hr {
     margin-bottom: 20px;
 }
 
+.orange-color {
+    color: #FF6D4D;
+}
+
 .hero {
     display: flex;
     margin-top: 60px;
@@ -124,6 +133,13 @@ hr {
 .promo {
     margin-bottom: 100px;
     padding-left: 250px;
+}
+
+.promo__text_sm768px {
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: 800;
 }
 
 .promo__text_sm576px {
@@ -235,7 +251,7 @@ hr {
     justify-content: center;
 }
 
-.dropdown_sm576px_1{
+.dropdown_sm576px_1 {
     text-align: center;
     width: 50%;
     display: flex;
@@ -246,7 +262,7 @@ hr {
     margin-top: 50px;
 }
 
-.dropdown_sm576px_2{
+.dropdown_sm576px_2 {
     text-align: center;
     width: 50%;
 }
@@ -267,7 +283,6 @@ hr {
     align-items: center;
 
 }
-
 
 
 .map__google-maps_sm768px {
@@ -372,11 +387,11 @@ hr {
     flex-wrap: wrap;
     list-style: none;
     align-items: center;
-    gap:20px;
+    gap: 10px;
 }
 
 
-.slider__content_576{
+.slider__content_576 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -384,9 +399,10 @@ hr {
     gap: 10px;
 }
 
-.education-price_576px{
+.education-price_576px {
     height: 2200px;
 }
+
 .card {
     height: 300px;
     width: 275px;
@@ -489,7 +505,7 @@ hr {
     align-items: center;
 }
 
-.education-price__caption_576{
+.education-price__caption_576 {
     margin-top: 20px;
     text-align: center;
 }
@@ -633,14 +649,14 @@ hr {
 }
 
 .education_img_768 {
-    height: 50%;
-    width: 49%;
+    height: 80%;
+    width: 80%;
     margin-bottom: 100px;
 }
 
 .about-education__info_768 {
-    height: 50%;
-    width: 49%;
+    height: 80%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -652,20 +668,20 @@ hr {
 }
 
 .about-education__text_768 {
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .about-education_text_main_768 {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 800;
 }
 
 .about-education__learning-topics_768 {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .sub_education_768 {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 800;
 }
 
@@ -727,7 +743,16 @@ hr {
     flex-direction: column;
     justify-content: center;
 }
-
+.school-autopark_768{
+    background-image: url('/img/jpg/Group 7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .school-autopark_text {
     text-align: center;
     font-size: 50px;
@@ -741,7 +766,7 @@ hr {
     margin-top: 100px;
 }
 
-.slider_576px{
+.slider_576px {
     display: flex;
     flex-direction: column;
 }
@@ -872,7 +897,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.join-our-school_768{
+.join-our-school_768 {
     background-image: url('/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -926,7 +951,7 @@ hr {
     margin-bottom: 20px;
 }
 
-.join-our-school_992{
+.join-our-school_992 {
     background-image: url('/img/jpg/Group 9.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -977,39 +1002,39 @@ hr {
 
 .slider-wrapper {
     overflow: hidden;
-  }
+}
 
-  .slide-next {
+.slide-next {
     /* opacity: 0!important; */
     /* transition: opacity 2s!important; */
     /* animation: slide-next-animation 0.5s; */
-  }
+}
 
-  .slide-previous {
+.slide-previous {
     /* opacity: 0; */
     /* transition: opacity 0.5s; */
     /* animation: slide-prev-animation 0.5s; */
-  }
+}
 
-  @keyframes slide-next-animation {
+@keyframes slide-next-animation {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     100% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
-  }
+}
 
-  @keyframes slide-prev-animation {
+@keyframes slide-prev-animation {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
+}
 
-  #successAlert {
+#successAlert {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -1020,10 +1045,11 @@ hr {
     border: 1px solid #C3E6CB;
     border-radius: 4px;
     font-size: 16px;
-  }
-  .row {
+}
+
+.row {
     padding-left: 2rem;
-  }
+}
 
 
 .footer {
@@ -1051,8 +1077,8 @@ hr {
     width: 45%;
 }
 
-.contacts__item{
-    color:#FFFFFF;
+.contacts__item {
+    color: #FFFFFF;
     text-decoration: none;
 }
 
@@ -1062,7 +1088,7 @@ hr {
     }
 }
 
-.footer_576{
+.footer_576 {
     background-image: url('/img/jpg/Group 10.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -1071,7 +1097,7 @@ hr {
     justify-content: center;
 }
 
-.footer__wrapper_576{
+.footer__wrapper_576 {
     margin-top: 70%;
     display: flex;
     flex-direction: column;
@@ -1079,7 +1105,7 @@ hr {
     text-align: center;
 }
 
-.join-our-school__button{
+.join-our-school__button {
     display: flex;
     justify-content: center;
 }
