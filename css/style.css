@@ -114,8 +114,9 @@ hr {
 
 .background_XXL1400px {
     background-image: url('/img/jpg/Backgr.png');
-    background-size: cover;
-    height: 950px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 800px;
     width: 100%;
 }
 
@@ -132,7 +133,7 @@ hr {
 
 .promo {
     margin-bottom: 100px;
-    padding-left: 250px;
+    padding-left: 100px;
 }
 
 .promo__text_sm768px {
@@ -381,6 +382,17 @@ hr {
     align-items: center;
 }
 
+.education-price-wrap_1400{
+    background-image: url('/img/jpg/Frame 53.jpg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .slider__content {
     display: flex;
     justify-content: space-evenly;
@@ -538,8 +550,8 @@ hr {
 }
 
 .about-education__info {
-    height: 50%;
-    width: 49%;
+    height: 80%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -551,8 +563,9 @@ hr {
 }
 
 .education_img_1400 {
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
+    margin-bottom: 100px;
 }
 
 .layout-2-column_576 {
@@ -568,24 +581,24 @@ hr {
 }
 
 .about-education_text_main_1400 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
     text-align: center;
 }
 
 .about-education__text_1400 {
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 5px;
 }
 
 .sub_education_1400 {
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 800;
     text-align: center;
 }
 
 .about-education__learning-topics_1400 {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .about-education_text_main {
@@ -595,8 +608,8 @@ hr {
 }
 
 .about-education__info_1200 {
-    height: 80%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -802,7 +815,7 @@ hr {
 
 
 .slider {
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .slider_576px {
@@ -822,7 +835,7 @@ hr {
 .student-feedback_1199{
     background-image: url('/img/jpg/Frame 52 (3).jpg');
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 55%;
     background-position: center;
 }
 
