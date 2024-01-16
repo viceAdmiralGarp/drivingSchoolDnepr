@@ -162,7 +162,7 @@ hr {
 .background_sm992px {
     background-image: url('/img/png/backgr_992.png');
     width: 100%;
-    height: 750px;
+    height: 600px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -390,6 +390,15 @@ hr {
     gap: 10px;
 }
 
+.slider__content_992{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+}
+
 
 .slider__content_576 {
     display: flex;
@@ -409,6 +418,13 @@ hr {
     display: flex;
     justify-content: center;
     border-radius: 25px;
+}
+
+.backgr_wrapper_992 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    margin-top: 50px;
 }
 
 
@@ -613,8 +629,8 @@ hr {
 
 
 .about-education__info_992 {
-    height: 40%;
-    width: 49%;
+    height: 80%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -626,26 +642,27 @@ hr {
 }
 
 .education_img_992 {
-    height: 40%;
-    width: 49%;
+    height: 80%;
+    width: 80%;
+    margin-bottom: 100px;
 }
 
 .sub_education_992 {
     font-weight: 800;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .about-education__text_992 {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .about-education_text_main_992 {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 800;
 }
 
 .about-education__learning-topics_992 {
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .education_img_768 {
@@ -738,12 +755,13 @@ hr {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 2000px;
+    height: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.school-autopark_768{
+
+.school-autopark_768 {
     background-image: url('/img/jpg/Group 7.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -753,6 +771,7 @@ hr {
     flex-direction: column;
     justify-content: center;
 }
+
 .school-autopark_text {
     text-align: center;
     font-size: 50px;
