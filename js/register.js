@@ -16,7 +16,7 @@ document.getElementById('register-' + getScreenSize(windowWidth)).addEventListen
         email: email
     };
 
-    fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8080/register', {
+    fetch('https://secure-fortress-93208-8703d6dae399.herokuapp.com/register', {
         method: 'POST',
         headers: myHeaders,
         body: JSON.stringify(data)

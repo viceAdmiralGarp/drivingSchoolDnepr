@@ -10,7 +10,7 @@ var requestOptions = {
 };
 
 function getComments() {
-  fetch("http://ec2-54-162-210-174.compute-1.amazonaws.com:8080/comments", requestOptions)
+  fetch("https://secure-fortress-93208-8703d6dae399.herokuapp.com/comments", requestOptions)
     .then(response => response.json())
     .then(result => {
       fillSlider(result)
@@ -35,6 +35,8 @@ function fillSlider(result) {
   while (sliderContent.firstChild) {
     sliderContent.removeChild(sliderContent.firstChild);
   }
+  sliderContent.innerHTML = '';
+  console.log(result);
 
   result.forEach(comment => {
     const sliderItem = document.createElement('li');
@@ -81,7 +83,9 @@ function createRightArrow() {
 function nextButton(windowWidth, sliderElement) {
   const numberToShow = getNumberToShow(windowWidth)
   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
-
+  sliderItems.forEach((item, index) => {
+    console.log(item.innerHTML);
+  });
   const showSliderItems = (slides) => {
     sliderElement.innerHTML = '';
     slides.forEach((item, index) => {
@@ -113,7 +117,7 @@ form.addEventListener('submit', (event) => {
   const fullname = document.querySelector('#fullname').value;
   const comment = document.querySelector('#comment').value;
   // Send POST request
-  fetch('http://ec2-54-162-210-174.compute-1.amazonaws.com:8080/comments', {
+  fetch('https://secure-fortress-93208-8703d6dae399.herokuapp.com/comments', {
     method: 'POST',
     headers: myHeaders,
     body: JSON.stringify({
