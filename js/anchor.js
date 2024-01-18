@@ -3,7 +3,7 @@ document.querySelector('#education').href = `#edu_${getScreenSizeFilials(window.
 document.querySelector('#cars').href = `#cars_${getScreenSizeCars(window.innerWidth)}`
 document.querySelector('#comments').href = `#comment_${getScreenSizeCars(window.innerWidth)}`
 document.querySelector('#contacts').href = `#contact_${getScreenSizeComments(window.innerWidth)}`
-document.querySelector('#register').href = `#register_${getScreenSizeRegister(window.innerWidth)}`
+document.querySelectorAll('#register').forEach(element => element.href = `#register_${getScreenSizeRegister(window.innerWidth)}`);
 
 function getScreenSizeFilials(windowWidth) {
     if (windowWidth <= 576)
