@@ -1,4 +1,6 @@
 
+let isListenerAssigned = false;
+
 var myHeaders = new Headers();
 // myHeaders.append("Authorization", "Basic dXNlcjo4YTJhODdkNC00ZTM0LTRlMjUtYmJiMi03YWJmNjk3MjAxMmU=");
 myHeaders.append("Content-Type", "application/json");
@@ -14,6 +16,7 @@ function getComments() {
     .then(response => response.json())
     .then(result => {
       fillSlider(result)
+      currentIndexC = 1;
     })
     .catch(error => console.log('error', error));
 }
@@ -83,9 +86,7 @@ function createRightArrow() {
 function nextButton(windowWidth, sliderElement) {
   const numberToShow = getNumberToShow(windowWidth)
   const sliderItems = sliderElement.querySelectorAll('.slider__item_comment');
-  sliderItems.forEach((item, index) => {
-    console.log(item.innerHTML);
-  });
+
   const showSliderItems = (slides) => {
     sliderElement.innerHTML = '';
     slides.forEach((item, index) => {
@@ -98,16 +99,15 @@ function nextButton(windowWidth, sliderElement) {
     });
   };
 
-  const nextButton = document.querySelector("#right_arrow_comment_id-" + getScreenSizeComment(windowWidth));
-  nextButton.addEventListener('click', () => {
-    showSliderItems(showNextComments(sliderItems, numberToShow));
-  });
+  if (sliderItems.length > numberToShow && !isListenerAssigned) {
+    const nextButton = document.querySelector("#right_arrow_comment_id-" + getScreenSizeComment(windowWidth));
+    nextButton.addEventListener('click', () => showSliderItems(showNextComments(sliderItems, numberToShow)));
 
-  const prevButton = document.querySelector("#left_arrow_comment_id-" + getScreenSizeComment(windowWidth));
-  prevButton.addEventListener('click', () => {
-    showSliderItems(showPrevComments(sliderItems, numberToShow));
-  });
-  
+    const prevButton = document.querySelector("#left_arrow_comment_id-" + getScreenSizeComment(windowWidth));
+    prevButton.addEventListener('click', () => showSliderItems(showPrevComments(sliderItems, numberToShow)));
+    isListenerAssigned = true;
+  }
+
   showSliderItems(Array.from(sliderItems).slice(0, numberToShow));
 }
 
@@ -117,23 +117,27 @@ form.addEventListener('submit', (event) => {
   const fullname = document.querySelector('#fullname').value;
   const comment = document.querySelector('#comment').value;
   // Send POST request
-  fetch('https://secure-fortress-93208-8703d6dae399.herokuapp.com/comments', {
-    method: 'POST',
-    headers: myHeaders,
-    body: JSON.stringify({
-      author: fullname,
-      comment: comment,
-      date: new Date(),
-    }),
-  })
-    .then(_ => {
-      getComments();
-      document.querySelector('#fullname').value = '';
-      document.querySelector('#comment').value = '';
+  if (fullname.length < 20 && comment.length < 149) {
+    fetch('https://secure-fortress-93208-8703d6dae399.herokuapp.com/comments', {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify({
+        author: fullname,
+        comment: comment,
+        date: new Date(),
+      }),
     })
-    .catch(_ => {
-      // Handle the error here
-    });
+      .then(_ => {
+        getComments();
+        document.querySelector('#fullname').value = '';
+        document.querySelector('#comment').value = '';
+      })
+      .catch(_ => {
+        // Handle the error here
+      });
+  } else {
+    showAlert("Имя или текст введенного комментария слишком длинные!", "dangerAlert");
+  }
 });
 
 function getScreenSizeComment(windowWidth) {
@@ -158,9 +162,10 @@ function getNumberToShow(windowWidth) {
     return 3
 }
 
-var currentIndexC = 1; 
+var currentIndexC = 1;
 
 function showNextComments(comments, numberToShow) {
+  console.log('sliders',comments);
   let displayedComments = [];
 
   for (var i = 0; i < numberToShow; i++) {
