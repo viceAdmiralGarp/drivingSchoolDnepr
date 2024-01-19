@@ -78,6 +78,17 @@ hr {
     background-color: #FF6D4D;
 }
 
+.button-red_en{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 31px;
+    width: 177px;
+    height: 60px;
+    color: white;
+    outline: none;
+    background-color: #FF6D4D;
+}
 
 .button-red:hover {
     opacity: 0.8;
