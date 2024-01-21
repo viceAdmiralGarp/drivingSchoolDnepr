@@ -105,6 +105,7 @@ function nextButton(windowWidth, sliderElement) {
 
     const prevButton = document.querySelector("#left_arrow_comment_id-" + getScreenSizeComment(windowWidth));
     prevButton.addEventListener('click', () => showSliderItems(showPrevComments(sliderItems, numberToShow)));
+
     isListenerAssigned = true;
   }
 
@@ -136,7 +137,14 @@ form.addEventListener('submit', (event) => {
         // Handle the error here
       });
   } else {
-    showAlert("Имя или текст введенного комментария слишком длинные!", "dangerAlert");
+    if (localStorage.getItem('language') === 'en')
+      showAlert("Name or text of the entered comment is too long!", "dangerAlert");
+    else if (localStorage.getItem('language') === 'ru')
+      showAlert("Имя или текст введенного комментария слишком длинные!", "dangerAlert");
+    else if (localStorage.getItem('language') === 'ua')
+      showAlert("Ім'я або текст введеного коментаря занадто довгі!", "dangerAlert");
+    else
+      showAlert("Ім'я або текст введеного коментаря занадто довгі!", "dangerAlert");
   }
 });
 
@@ -165,7 +173,7 @@ function getNumberToShow(windowWidth) {
 var currentIndexC = 1;
 
 function showNextComments(comments, numberToShow) {
-  console.log('sliders',comments);
+  console.log('sliders', comments);
   let displayedComments = [];
 
   for (var i = 0; i < numberToShow; i++) {

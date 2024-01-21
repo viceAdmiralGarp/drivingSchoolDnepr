@@ -33,19 +33,64 @@ citySelect.addEventListener("change", function () {
     locationDetails.textContent = "";
 
     if (selectedCity === "dnipro") {
-        locationSelect.innerHTML += `
-          <option value="0">Днепр Центр</option>
-          <option value="1">ж/м Западный</option>
-          <option value="2">ж/м Клочко</option>
+        const selectedLanguage = localStorage.getItem("language");
+        if (selectedLanguage === "en") {
+            locationSelect.innerHTML += `
+        <option value="0">Dnipro Center</option>
+        <option value="1">r/a Western</option>
+        <option value="2">r/a Klochko</option>
         `;
+        } else if (selectedLanguage === "ru") {
+            locationSelect.innerHTML += `
+        <option value="0" selected>Днепр Центр</option>
+        <option value="1">ж/м Западный</option>
+        <option value="2">ж/м Клочко</option>
+      `;
+        } else if (selectedLanguage === "ua") {
+            locationSelect.innerHTML += `
+        <option value="0" selected>Дніпро Центр</option>
+        <option value="1">ж/м Західний</option>
+        <option value="2">ж/м Клочко</option>
+        `;
+        } else {
+            locationSelect.innerHTML += `
+        <option value="0" selected>Дніпро Центр</option>
+        <option value="1">ж/м Західний</option>
+        <option value="2">ж/м Клочко</option>
+        `;
+        }
         locationDetails.innerHTML = dniproPoints[0](getScreenSizeMap(windowWidth).mapW, getScreenSizeMap(windowWidth).mapH);
     } else if (selectedCity === "kamanskoe") {
-        locationSelect.innerHTML += `
+        const selectedLanguage = localStorage.getItem("language");
+        if (selectedLanguage === "en") {
+            locationSelect.innerHTML += `
+          <option value="0">Street. Lyubavichskogo Rebe (Arsenicheva) 3 office 5</option>
+          <option value="1">3 microdistrict Heroiv 42-82 (TC Dolya)</option>
+          <option value="2">11 microdistrict Avenue Heroiv ATO, 2</option>
+          <option value="3">10 microdistrict (new class) Avenue Peremohy, 57</option>
+        `;
+        } else if (selectedLanguage === "ru") {
+            locationSelect.innerHTML += `
           <option value="0">ул. Любавичского Ребе (Арсеничева) 3 оф. 5</option>
           <option value="1">3 мкр. бульвар Героев 42-82 (ТЦ Доля)</option>
           <option value="2">11 мкр. проспект Героев АТО, 2</option>
           <option value="3">10 мкр. (новый класс) проспект Победы, 57</option>
         `;
+        } else if (selectedLanguage === "ua") {
+            locationSelect.innerHTML += `
+          <option value="0">вул. Любавичського Ребе (Арсенічева) 3 оф. 5</option>
+          <option value="1">3 мкр. бульвар Героїв 42-82 (ТЦ Доля)</option>
+          <option value="2">11 мкр. проспект Героїв АТО, 2</option>
+          <option value="3">10 мкр. (новий клас) проспект Перемоги, 57</option>
+        `;
+        } else {
+            locationSelect.innerHTML += `
+            <option value="0">вул. Любавичського Ребе (Арсенічева) 3 оф. 5</option>
+            <option value="1">3 мкр. бульвар Героїв 42-82 (ТЦ Доля)</option>
+            <option value="2">11 мкр. проспект Героїв АТО, 2</option>
+            <option value="3">10 мкр. (новий клас) проспект Перемоги, 57</option>
+          `;
+        }
         locationDetails.innerHTML = kamenskoePoints[0](getScreenSizeMap(windowWidth).mapW, getScreenSizeMap(windowWidth).mapH);
     } else {
         locationSelect.disabled = true;

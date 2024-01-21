@@ -1216,3 +1216,7 @@ hr {
 .my_carousel .carousel-item img{
     object-fit: cover;
 }
+  
+  .language-slider select {
+    width: 100%;
+  }
