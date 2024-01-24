@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./img/svg/grand-logo2%201.svg" type="image/png">
+    <title>Grand Driving School</title>
+</head>
+<body>
+<div class="category">
+    <table>
+
+        <thead>
+        <tr>
+            <th>Категория</th>
+            <th>Цена</th>
+
+        </tr>
+        </thead>
+
+        <tr>
+            <td>A/A1</td>
+            <td><input type="text" name="A/A1" placeholder="Введите цену"></td>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            <td><input type="text" name="B" placeholder="Введите цену"></td>
+        </tr>
+
+        <tr>
+            <td>D</td>
+            <td><input type="text" name="D" placeholder="Введите цену"></td>
+        </tr>
+
+        <tr>
+            <td>C/C1</td>
+            <td><input type="text" name="C/C1" placeholder="Введите цену"></td>
+        </tr>
+
+        <tr>
+            <td>BE</td>
+            <td><input type="text" name="BE" placeholder="Введите цену"></td>
+        </tr>
+
+        <tr>
+            <td>CE</td>
+            <td><input type="text" name="CE" placeholder="Введите цену"></td>
+        </tr>
+    </table>
+
+    <button class="set-price">Установить цену</button>
+</div>
+
+<div class="comments">
+    <h1>Комментарии</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Комментарий</th>
+            <th>Действие</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>
+                <button class="action">Удалить</button>
+                <button class="action">Редактировать</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h1>Галерея</h1>
+    <div class="gallery">
+
+        <div class="item">
+            <img src="./img/jpg/2022-01-22.jpg" alt="" class="img">
+            <button class="delete-button">X</button>
+        </div>
+
+        <div class="item">
+            <img src="./img/jpg/2022-01-22.jpg" alt="" class="img">
+            <button class="delete-button">X</button>
+        </div>
+
+        <div class="add-img">
+            <button class="add-button">+</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

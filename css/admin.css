@@ -1,0 +1,78 @@
+body {
+    margin-top: 86px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: #FFFFFF;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.set-price{
+    margin-top: 50px;
+    width: 10%;
+}
+
+.comments{
+    margin-top: 100px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.gallery{
+    margin-top: 100px;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.delete-button{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.img{
+    width: 60%;
+    height:60%;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
